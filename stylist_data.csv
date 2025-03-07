@@ -1,0 +1,25 @@
+Season,Occasion,Body_Type,Clothing_Type
+Summer,Casual,Pear,Sundress
+Summer,Casual,Apple,T-shirt and Shorts
+Summer,Casual,Hourglass,Maxi Dress
+Summer,Casual,Rectangle,Crop Top and Jeans
+Summer,Formal,Pear,Sleeveless Gown
+Summer,Formal,Apple,A-line Dress
+Summer,Formal,Hourglass,Blazer and Skirt
+Summer,Formal,Rectangle,Pencil Dress
+Winter,Casual,Pear,Sweater and Jeans
+Winter,Casual,Apple,Cozy Hoodie
+Winter,Casual,Hourglass,Turtleneck and Skirt
+Winter,Casual,Rectangle,Wool Coat
+Winter,Formal,Pear,Long Coat with Boots
+Winter,Formal,Apple,Fitted Blazer
+Winter,Formal,Hourglass,Knee-Length Dress
+Winter,Formal,Rectangle,Trench Coat
+Spring,Party,Pear,Floral Dress
+Spring,Party,Apple,Wrap Dress
+Spring,Party,Hourglass,Fit and Flare Dress
+Spring,Party,Rectangle,Layered Skirt
+Autumn,Sports,Pear,Sweatpants and Tank
+Autumn,Sports,Apple,Tracksuit
+Autumn,Sports,Hourglass,Gym Leggings
+Autumn,Sports,Rectangle,Yoga Pants
