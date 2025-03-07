@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendation History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>📜 Past Recommendations</h1>
+
+        {% if past_predictions %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Timestamp</th>
+                        <th>Season</th>
+                        <th>Occasion</th>
+                        <th>Body Type</th>
+                        <th>Prediction</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for entry in past_predictions %}
+                        <tr>
+                            <td>{{ entry["Timestamp"] }}</td>
+                            <td>{{ entry["Season"] }}</td>
+                            <td>{{ entry["Occasion"] }}</td>
+                            <td>{{ entry["Body_Type"] }}</td>
+                            <td>{{ entry["Prediction"] }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <a href="{{ url_for('download_csv') }}" class="download-btn">📥 Download CSV</a>
+
+        {% else %}
+            <p>No past recommendations available.</p>
+        {% endif %}
+
+        <a href="{{ url_for('index') }}" class="back-btn">🏠 Back to Home</a>
+    </div>
+</body>
+</html>

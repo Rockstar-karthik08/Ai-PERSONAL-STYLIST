@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Personal Stylist</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>👕👚 AI Personal Stylist</h1>
+        <p>outfit recommendations based on season, occasion, and body type.</p>
+
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+
+        <form method="POST">
+            <label>Season:</label>
+            <select name="season" required>
+                <option value="">-- Select Season --</option>
+                <option>Summer</option>
+                <option>Winter</option>
+                <option>Spring</option>
+                <option>Autumn</option>
+            </select>
+
+            <label>Occasion:</label>
+            <select name="occasion" required>
+                <option value="">-- Select Occasion --</option>
+                <option>Casual</option>
+                <option>Formal</option>
+                <option>Party</option>
+                <option>Sports</option>
+            </select>
+
+            <label>Body Type:</label>
+            <select name="body_type" required>
+                <option value="">-- Select Body Type --</option>
+                <option>Pear</option>
+                <option>Apple</option>
+                <option>Hourglass</option>
+                <option>Rectangle</option>
+            </select>
+
+            <button type="submit">Get Recommendation</button>
+        </form>
+
+        {% if prediction %}
+            <h2>✨ Recommended Outfit: <strong>{{ prediction }}</strong></h2>
+            <img src="{{ image_url }}" alt="Recommended Outfit">
+        {% endif %}
+
+        <a href="{{ url_for('history') }}" class="history-btn">📜 View Past Recommendations</a>
+    </div>
+</body>
+</html>
